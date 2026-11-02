@@ -1,0 +1,70 @@
+{
+  "_comment": "GENERIC illustrative example — contains NO real customer data. Copy to my_config.json and replace every value from gather_tenant_data.sh output. 'exec_overview'/'value_summary' rows are [text, indent-level, role]; role=head|body. Features: {title,done,status,bullets[],url,capture}. Replace <TENANT> in URLs with the real tenant id. NEVER invent numbers.",
+  "template": "/path/to/[TEMPLATE] - Technical Impact Presentation.pptx",
+  "output": "/path/to/<Customer> - Technical Impact Presentation.pptx",
+  "base_url": "https://<TENANT>.apps.dynatrace.com/ui/apps/",
+  "cover": {
+    "title": "Technical Impact Review",
+    "subtitle": "<Customer> × Dynatrace — Proof of Value Summary",
+    "presenter": "<Your Name> — Solutions Engineer",
+    "date": "<Month Year>"
+  },
+  "agenda": [
+    "Executive Overview",
+    "Customer Point of View — why Dynatrace, why now",
+    "POV Timeline & Scope",
+    "Success Criteria",
+    "Dynatrace in Action — use cases vs. success criteria",
+    "Value-Add Capabilities",
+    "POV Results & Recommended Next Steps"
+  ],
+  "exec_overview": [
+    ["The challenge", 0, "head"],
+    ["Observability is fragmented across disconnected tools, leaving blind spots and slow cross-team troubleshooting.", 1, "body"],
+    ["The Dynatrace proof of value", 0, "head"],
+    ["A single AI-powered platform: automatic discovery, end-to-end tracing, database/network/cloud visibility and causal AI with zero manual instrumentation.", 1, "body"],
+    ["Scope proven in this POV", 0, "head"],
+    ["<N> hosts · <N> services · <N> process groups · <N> Kubernetes clusters · <N> logs/2h · <N> problems auto-detected in 7 days. (fill from gather_tenant_data.sh)", 1, "body"]
+  ],
+  "customer_pov": [
+    ["Tool Overload", "Disconnected tools; manual correlation across infra, apps, DB, network and cloud. No unified view."],
+    ["Customer Need", "One tool with all the answers: auto discovery & dependency mapping, end-to-end tracing, DB/network visibility, AI-assisted ops."],
+    ["Why Dynatrace", "Unified AI-powered observability: OneAgent auto-discovery & PurePath tracing, Dynatrace Intelligence causal AI, Grail at scale, MCP + CoPilot."],
+    ["Why Now", "Consolidate fragmented tooling, de-risk the platform, modernize with AI-assisted ops and ITSM-integrated workflows."]
+  ],
+  "timeline": [
+    ["Week 1", "Deploy", "OneAgent rollout, data validation, config"],
+    ["Week 2-3", "Discovery & Tracing", "Auto-discovery, Smartscape, tracing"],
+    ["Week 4-5", "Data & Cloud", "Databases, network, cloud connectors"],
+    ["Week 6", "AI & Integrations", "MCP/CoPilot, ITSM, dashboards"],
+    ["Week 7", "POV Summary", "Results & success-criteria scorecard"]
+  ],
+  "sc_title": "Dynatrace Platform POV — Scope & Success Criteria",
+  "success_criteria": [
+    ["Device Discovery & Mapping", "Identify shadow IT / shadow-observability components", "Completed", true],
+    ["Service Mapping & Dependencies", "Auto-map services & dependencies across the stack", "Completed", true],
+    ["Distributed Tracing", "Trace transactions end-to-end to isolate latency, errors & root cause", "Completed", true],
+    ["Database Monitoring", "Find slow queries & resource constraints before they hit availability", "In Process", false],
+    ["Consolidated Observability", "One tool with all the answers — replace broken tooling", "In Process", false],
+    ["Cloud Connection", "Visibility into cloud resources (AWS/Azure/GCP)", "Completed", true]
+  ],
+  "features": [
+    {"title":"Device Discovery & Mapping","done":true,"status":"Completed",
+     "bullets":["OneAgent + Discovery & Coverage surface every host, process and device automatically.","<N> hosts and <N> process groups discovered — no manual inventory.","Dependencies mapped the moment an agent is deployed."],
+     "url":"https://<TENANT>.apps.dynatrace.com/ui/apps/dynatrace.discovery.coverage","capture":"Discovery & Coverage — monitored vs. unmonitored estate"},
+    {"title":"Distributed Tracing","done":true,"status":"Completed",
+     "bullets":["End-to-end PurePath tracing from entry service to database, automatically.","<N> spans captured in 2h; pinpoint latency, errors and root cause per request.","Code-level visibility across runtimes — zero manual instrumentation."],
+     "url":"https://<TENANT>.apps.dynatrace.com/ui/apps/dynatrace.distributedtracing","capture":"Distributed Tracing — a trace / service flow for <key service>"},
+    {"title":"Database Monitoring","done":false,"status":"In Process",
+     "bullets":["Query-level visibility tied to the calling services — slow queries before they hit availability.","Statements & performance surfaced automatically.","<blocker / next step here>."],
+     "url":"https://<TENANT>.apps.dynatrace.com/ui/apps/dynatrace.database.overview","capture":"Databases app — services & slowest statements"}
+  ],
+  "value_summary": [
+    ["Value delivered", 0, "head"],
+    ["Consolidated observability across <N> hosts, <N> services and <N> Kubernetes clusters — one platform, one data model.", 1, "body"],
+    ["Automatic discovery, end-to-end tracing and Dynatrace Intelligence causal AI.", 1, "body"],
+    ["Recommended next steps", 0, "head"],
+    ["<list the In-Process items and owners here>.", 1, "body"]
+  ],
+  "closing": {"title": "Thank You", "subtitle": "Dynatrace · <Customer> Proof of Value"}
+}
